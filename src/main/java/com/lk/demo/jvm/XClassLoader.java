@@ -14,8 +14,13 @@ public class XClassLoader extends ClassLoader{
         XClassLoader xClassLoader = new XClassLoader();
         Class<?> aClass = xClassLoader.findClass(className);
         Method method = aClass.getMethod(methodName);
+        Method[] methods = aClass.getMethods();
+        for (Method method1 : methods) {
+            System.out.println(method1.getName());
+        }
         //创建对象实例
         Object instance = aClass.getDeclaredConstructor().newInstance();
+
         method.invoke(instance);
     }
 
