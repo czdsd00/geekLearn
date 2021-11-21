@@ -11,8 +11,8 @@ public class OkhttpUtils {
     public static void get(){
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
-                .url("http://127.0.0.1:8888/")
-                .addHeader("geek","lk")
+                .url("http://127.0.0.1:8888/1")
+//                .addHeader("geek","lk")
                 .build();
         RequestBody body = request.body();
         System.out.println(request);
